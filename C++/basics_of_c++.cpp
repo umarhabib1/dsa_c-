@@ -38,6 +38,6 @@ int main()
 
         cout<<something<<endl;
         cout<<"Hello "<<name<<endl;
-
+  
     return 0;
 }
