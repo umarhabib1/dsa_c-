@@ -6,7 +6,7 @@ using namespace std;
 bool isValid(vector<int> arr,int n ,int cows,int mid){
     int count = 1; 
     int lastposition = arr[0];
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) 
     {  
       if (arr[i] - lastposition >= mid)
         {
