@@ -16,9 +16,7 @@ int main()
     //         maxSum = max(currentSum, maxSum);
     //     }
     // }
-    // cout<<"max subarray sum = "<< maxSum;
-
-
+    // cout<<"max subarray sum = "<< maxSum ;
 
     //   Kadane's Algorithm
     int n = 5;
@@ -28,16 +26,12 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-         currentSum +=  arr[i];
-        maxSum = max(currentSum,maxSum);
+        currentSum += arr[i];
+        maxSum = max(currentSum, maxSum);
         if (currentSum < 0)
         {
             currentSum = 0;
-        }        
+        }
     }
-    cout<<"max subarray sum = "<< maxSum;
-
-    
-
-
+    cout << "max subarray sum = " << maxSum;
 }
