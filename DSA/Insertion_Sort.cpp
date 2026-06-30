@@ -9,7 +9,7 @@ int main()
     int n = arr.size();
 
     for (int i = 1; i < n; i++)
-    {
+    { 
         int curr = arr[i];
         int previous = i - 1;
         while (previous >= 0 && arr[previous] > curr)
