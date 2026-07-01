@@ -15,7 +15,7 @@ int main()
         while (previous >= 0 && arr[previous] > curr)
         {
             arr[previous + 1] = arr[previous];
-            previous--;
+            previous--; 
         }
         arr[previous + 1] = curr;
     }
