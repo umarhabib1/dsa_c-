@@ -8,7 +8,7 @@ void insert(int value) {
     
     endIndex++;
     A[endIndex] = value;
-}
+}  
 int main(){
  
    insert(1);
