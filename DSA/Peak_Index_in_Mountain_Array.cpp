@@ -4,10 +4,9 @@ using namespace std;
 
 int main()
 {
-
     vector<int> nums = {0, 3, 8, 9, 5, 2};
     int n = nums.size();
-    int st = 1; 
+    int st = 1;  
     int end = n - 2;
     int peak = 0;
 
