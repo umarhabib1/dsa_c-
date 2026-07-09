@@ -5,7 +5,7 @@ int main()
 {
     // int n = 5;
     // int arr[n] = {1, 2, 3, 4, 5};
-    // int maxSum = INT_MIN; 
+    // int maxSum = INT_MIN;  
 
     // for (int st = 0; st < n; st++)
     // {
