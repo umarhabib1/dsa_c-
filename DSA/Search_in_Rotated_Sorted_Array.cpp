@@ -18,7 +18,7 @@ int Binay_search(vector<int> arr, int end, int target)
         
 
         if (st <= mid)
-        {
+        { 
             if (arr[st] <= target <= arr[mid])
             {
                end = mid-1;
