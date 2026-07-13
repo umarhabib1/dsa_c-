@@ -13,12 +13,12 @@ int Binay_search(vector<int> arr, int end, int target)
         if (arr[mid] == target)
         {
             cout<< arr[mid];
-            return mid;
+            return mid; 
         }
         
 
         if (st <= mid)
-        { 
+        {  
             if (arr[st] <= target <= arr[mid])
             {
                end = mid-1;
