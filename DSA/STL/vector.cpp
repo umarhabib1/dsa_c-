@@ -10,10 +10,10 @@ int main(){
     vec.push_back(5);
     vec.emplace_back(6);
     vec.pop_back();
-    cout<<"size = "<<vec.size()<<endl;
+    cout<<"size = "<<vec.size()<<endl; 
     cout<<"capacity = "<<vec.capacity()<<endl;
 
     cout<<"vec at index of 2 = "<<vec.at(2)<<endl;
-    cout<<"vec at index of 3 = "<<vec[3]<<endl;
+    cout<<"vec at index of 3  = "<<vec[3]<<endl;
 
 }
