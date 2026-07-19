@@ -13,7 +13,7 @@ int main(){
     a.pop_back();
     a.push_back(2);
     a.push_front(9);
-    a.pop_front();
+    a.pop_front(); 
 
     for(int val : a){
         cout<<val<<" ";
