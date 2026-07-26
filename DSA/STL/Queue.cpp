@@ -16,5 +16,5 @@ int main(){
 
     cout<<q1.size()<<endl;
 
-
+ 
 }
