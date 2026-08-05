@@ -18,6 +18,31 @@ using namespace std;
 //     }else{
 //         cout<<"Not a Palindrome"<<endl; 
 //     }
+#include <cctype>
+using namespace std;
+
+bool isPalindrome(string s) {
+    int left = 0;
+    int right = s.size() - 1;
+
+    while (left < right) {
+
+        while (left < right && !isalnum(s[left]))
+            left++;
+
+        while (left < right && !isalnum(s[right]))
+            right--;
+
+        if (tolower(s[left]) != tolower(s[right]))
+            return false;
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
     
 // }
 
@@ -30,5 +55,13 @@ int main() {
     // Check(str, strReverse);
 
     // cout<<strReverse<<endl;
+
+
+    string s = "A man, a plan, a canal: Panama";
+
+    if (isPalindrome(s))
+        cout << "Valid Palindrome";
+    else
+        cout << "Not a Valid Palindrome";
 
 }
