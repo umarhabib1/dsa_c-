@@ -9,8 +9,6 @@ int main(){
     {
         str.erase(str.find(part), part.size());
         
-    }
-    
+    } 
     cout<<str;
-    
 }
