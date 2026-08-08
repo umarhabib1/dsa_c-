@@ -15,15 +15,27 @@ using namespace std;
 //         return true;
 // }
 
-void printDight(int n){
+// void printDight(int n){
+//     while (n != 0)
+//     {
+//         int digit = n % 10;
+//         cout<<"num = "<<digit<<endl;
+
+//         n = n/10;
+//     }
+    
+// }
+
+bool isArmstrong(int n){
+    int copyN = n;
+    int sumOfCubes = 0;
     while (n != 0)
     {
-        int digit = n % 10;
-        cout<<"num = "<<digit<<endl;
-
-        n = n/10;
+        int digit = n%10;
+        sumOfCubes += (digit*digit*digit);
+        n /= 10;
     }
-    
+    return sumOfCubes == copyN;
 }
 
 int main()
@@ -36,9 +48,22 @@ int main()
     // else
     //     cout << n << " is Not a Prime Number";
 
+    // int n;
+    // cout << "Enter a number: ";
+    // cin >> n;
+    // printDight(n);
+    
+
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    printDight(n);
-
+    isArmstrong(n);
+    if (isArmstrong(n))
+    {
+        cout<<n <<" is Armstrong";
+    }else{
+        cout<<n <<" is not Armstrong";
+    }
+    
+    
 }
