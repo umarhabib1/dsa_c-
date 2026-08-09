@@ -23,19 +23,38 @@ using namespace std;
 
 //         n = n/10;
 //     }
-    
+
 // }
 
-bool isArmstrong(int n){
-    int copyN = n;
-    int sumOfCubes = 0;
-    while (n != 0)
+// bool isArmstrong(int n){
+//     int copyN = n;
+//     int sumOfCubes = 0;
+//     while (n != 0)
+//     {
+//         int digit = n%10;
+//         sumOfCubes += (digit*digit*digit);
+//         n /= 10;
+//     }
+//     return sumOfCubes == copyN;
+// }
+
+int gcd(int a, int b)
+{ // HCF
+    while (a > 0 && b > 0)
     {
-        int digit = n%10;
-        sumOfCubes += (digit*digit*digit);
-        n /= 10;
+        if (a > b)
+        {
+            a %= b;
+        }
+        else
+        {
+            b %= a;
+        }
     }
-    return sumOfCubes == copyN;
+
+    if (a == 0)
+        return b;
+    return a;
 }
 
 int main()
@@ -52,18 +71,19 @@ int main()
     // cout << "Enter a number: ";
     // cin >> n;
     // printDight(n);
-    
 
-    int n;
-    cout << "Enter a number: ";
-    cin >> n;
-    isArmstrong(n);
-    if (isArmstrong(n))
-    {
-        cout<<n <<" is Armstrong";
-    }else{
-        cout<<n <<" is not Armstrong";
-    }
+    // int n;
+    // cout << "Enter a number: ";
+    // cin >> n;
+    // isArmstrong(n);
+    // if (isArmstrong(n))
+    // {
+    //     cout<<n <<" is Armstrong";
+    // }else{
+    //     cout<<n <<" is not Armstrong";
+    // }
+
+
     
-    
+    cout << gcd(20, 28) << endl;
 }
