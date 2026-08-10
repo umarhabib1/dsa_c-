@@ -84,6 +84,5 @@ int main()
     // }
 
 
-    
-    cout << gcd(20, 28) << endl;
+     cout << gcd(20, 28) << endl;  // HCF
 }
