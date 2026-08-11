@@ -57,6 +57,28 @@ int gcd(int a, int b)
     return a;
 }
 
+int lcm(int a , int b){
+    int Gcd = gcd(a,b);
+    return (a*b) /Gcd;
+}
+
+int Reverse(int num){
+    int revnumber = 0;
+    
+    while (num != 0)
+    {
+        int digit = num % 10;
+        if (revnumber < INT_MIN /10 || revnumber > INT_MAX /10)
+        {
+            return 0;
+        }
+        
+        revnumber = revnumber*10 + digit;
+        num = num / 10;
+    }
+    return revnumber;
+}
+
 int main()
 {
     //  int n;
@@ -84,5 +106,13 @@ int main()
     // }
 
 
-     cout << gcd(20, 28) << endl;  // HCF
+    //  cout << gcd(20, 28) << endl;  // HCF
+
+
+    //  cout<<lcm(20,28);
+
+
+    int num = 1234;
+    cout<<Reverse(num);
+
 }
