@@ -10,7 +10,29 @@ if (n == 1)    // base case
 printNumber(n-1); // recursive case 
 cout<<n<<" ";
 }
-int main(){
+
+int factorial(int n){
+    if (n == 1)
+    {
+        return 1;
+    }
     
-    printNumber(5);
+    return n * factorial(n -1);
+}
+
+int sumOfN(int n){
+    if (n == 1)
+    {
+        return 1;
+    }
+    
+    return n + factorial(n -1);
+}
+
+int main(){
+    // printNumber(5);
+
+    // cout<< factorial(4);
+
+    cout<< sumOfN(4);
 }
