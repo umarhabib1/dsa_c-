@@ -18,6 +18,7 @@ void printSubSet(vector<int>& vec, vector<int>& ans , int i){
     ans.pop_back();
     printSubSet(vec ,ans ,i+1);
 
+    
 }
 
 int main(){
