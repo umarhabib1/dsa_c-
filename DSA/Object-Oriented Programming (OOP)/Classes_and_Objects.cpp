@@ -6,6 +6,7 @@ class Student
 public:
     // properties
     string name;
+    
     int age;
 
     //  methods  / Member functions
