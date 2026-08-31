@@ -24,4 +24,5 @@ int main()
     cout << t.getSalary(); // ✅
 
     // t.salary = 50000; // ❌ wil give error
+    
 }
