@@ -9,6 +9,7 @@ int main()
     int c = a+b;
     string s =  "hello";
     string s1 =  "hello";
+    string s2 =  "hello";
     
     cout<<c<<endl;  
     cout<<s<<endl;  
