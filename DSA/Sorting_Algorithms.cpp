@@ -19,7 +19,7 @@ int main()
     // for (int i = 0; i < n-1; i++)
     // {
     //     for (int j = 0; j < n-i-1; j++)    // optimize = j < n-i-1   & normal = j < n-1
-    //     {
+    //     {        
     //         if (arr[j] > arr[j+1])
     //         {
     //             int temp = arr[j];   //
@@ -58,6 +58,7 @@ int main()
         }
         arr[previous +1] = current;
     }
+    
     print(n , arr);
 
 }
