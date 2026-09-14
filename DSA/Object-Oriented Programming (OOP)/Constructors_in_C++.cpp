@@ -10,7 +10,9 @@ int main()
     string s =  "hello";
     string s1 =  "hello";
     string s5 =  "hello";
-    string s6 =  "hello";
+
+    string s623112 =  "hdsllo";
+
     string s4 =  "hello";
     string s4232 =  "hello";
     string s423 =  "hello";
