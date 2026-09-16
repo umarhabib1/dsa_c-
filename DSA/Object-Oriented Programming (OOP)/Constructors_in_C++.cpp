@@ -14,7 +14,8 @@ int main()
     string s5d =  "hello";
 
     string s623112 =  "hdsllo";
-
+   
+    int asd  = 123;
     string s4 =  "hello";
     string s4232 =  "hello";
     string s423 =  "hello";
