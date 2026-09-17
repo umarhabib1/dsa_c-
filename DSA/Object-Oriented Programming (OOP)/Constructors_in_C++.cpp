@@ -21,6 +21,9 @@ int main()
     string s423 =  "hello";
 
     string s2 =  "hello";
+
+
+    int sd = 1231231;
     
     cout<<c<<endl;  
     cout<<s<<endl;  
