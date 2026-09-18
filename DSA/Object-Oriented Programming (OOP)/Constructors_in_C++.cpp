@@ -25,6 +25,8 @@ int main()
 
     int sd = 1231231;
     
+    
     cout<<c<<endl;  
+    
     cout<<s<<endl;  
 }   
