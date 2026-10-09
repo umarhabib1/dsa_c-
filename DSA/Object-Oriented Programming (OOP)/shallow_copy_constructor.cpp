@@ -30,5 +30,6 @@ int main()
     *s2.age = 25;
 
     cout << "s1 age: " << *s1.age << endl;
+    
     cout << "s2 age: " << *s2.age << endl;
 }
