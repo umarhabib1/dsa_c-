@@ -21,6 +21,9 @@ public:
 int main() {
     Student s1("Haider", 19);
     s1.display();
+    
+
+    s1.display();
 
     return 0;
 }
