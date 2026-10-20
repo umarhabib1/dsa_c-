@@ -20,6 +20,7 @@ int main() {
     Teacher t1;
 
     t1.showMarks(s1);
+    t1.showMarks(s1);
 
     return 0;
 }
