@@ -25,6 +25,7 @@ int main() {
         make_unique<Student>("Ali");
 
     ptr->display();
+    ptr->display();
 
     return 0;
 }
