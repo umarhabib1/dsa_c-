@@ -19,7 +19,8 @@ int main() {
     head->next->next = new Node(30);
 
     Node* temp = head;
-
+    Node* temp = head;
+    
     while (temp != nullptr) {
         cout << temp->data << " ";
         temp = temp->next;
