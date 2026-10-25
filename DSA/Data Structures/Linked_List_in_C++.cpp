@@ -2,33 +2,37 @@
 #include <iostream>
 using namespace std;
 
-class Node {
+class Node
+{
 public:
     int data;
-    Node* next;
+    Node *next;
 
-    Node(int value) {
+    Node(int value)
+    {
         data = value;
         next = nullptr;
     }
 };
 
-int main() {
-    Node* head = new Node(10);
+int main()
+{
+    Node *head = new Node(10);
     head->next = new Node(20);
     head->next->next = new Node(30);
 
-    Node* temp = head;
-    Node* temp = head;
-    
-    while (temp != nullptr) {
+    Node *temp = head;
+
+    while (temp != nullptr)
+    {
         cout << temp->data << " ";
         temp = temp->next;
     }
 
     // Free the allocated memory
-    while (head != nullptr) {
-        Node* temp = head;
+    while (head != nullptr)
+    {
+        Node *temp = head;
         head = head->next;
         delete temp;
     }
