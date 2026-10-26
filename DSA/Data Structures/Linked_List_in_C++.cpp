@@ -32,8 +32,10 @@ int main()
     // Free the allocated memory
     while (head != nullptr)
     {
-        Node *temp = head;
+        Node *temp = head;  
+
         head = head->next;
+        
         delete temp;
     }
 
