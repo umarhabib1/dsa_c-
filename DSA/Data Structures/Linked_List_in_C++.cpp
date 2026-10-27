@@ -26,6 +26,7 @@ int main()
     while (temp != nullptr)
     {
         cout << temp->data << " ";
+        
         temp = temp->next;
     }
 
@@ -37,7 +38,7 @@ int main()
         head = head->next;
         
         delete temp;
-    }
 
+    }
     return 0;
 }
