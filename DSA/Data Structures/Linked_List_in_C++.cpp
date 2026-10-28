@@ -37,8 +37,9 @@ int main()
 
         head = head->next;
         
-        delete temp;
 
+        
+        delete temp;
     }
     return 0;
 }
