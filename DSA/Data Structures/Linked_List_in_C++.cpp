@@ -25,6 +25,8 @@ int main()
 
     Node *temp = head;
 
+
+
     while (temp != nullptr)
     {
         cout << temp->data << " ";
