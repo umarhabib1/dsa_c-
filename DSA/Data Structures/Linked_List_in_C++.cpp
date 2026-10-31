@@ -29,15 +29,19 @@ int main()
 
     while (temp != nullptr)
     {
+
         cout << temp->data << " ";
         
         temp = temp->next;
+
     }
 
     // Free the allocated memory
 
+
     while (head != nullptr)
     {
+        
         Node *temp = head;  
 
         head = head->next;
