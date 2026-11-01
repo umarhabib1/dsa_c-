@@ -47,8 +47,12 @@ int main()
         head = head->next;
         
 
+    
         
         delete temp;
+        
     }
+
+
     return 0;
 }
