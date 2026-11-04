@@ -17,6 +17,10 @@ int data;
 
 
 
+
+
+    
+
     Node(int value)
     {
         data = value;
