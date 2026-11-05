@@ -28,6 +28,7 @@ int data;
     }
 };
 
+
 int main()
 {
     Node *head = new Node(10);
@@ -53,10 +54,14 @@ int main()
 
 
     while (head != nullptr)
-    {
-        
-        Node *temp = head;  
 
+    {
+
+        
+        
+         Node *temp = head;  
+ 
+        
         head = head->next;
         
 
