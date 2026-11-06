@@ -55,6 +55,11 @@ int main()
 
     while (head != nullptr)
 
+
+
+
+
+
     {
 
         
@@ -69,6 +74,9 @@ int main()
         
         delete temp;
         
+    
+    
+    
     }
 
 
