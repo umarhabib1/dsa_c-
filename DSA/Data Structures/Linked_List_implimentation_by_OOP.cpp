@@ -28,8 +28,13 @@ public:
 
     void push_front(int val)
     {
-        Node *newNode = new Node(val);
-        if (head == NULL)
+        Node *newNode = new Node(val);          /*  int a;
+                                                 int *ptr = new int(12);
+                                                 // cout << (*ptr) - 2;
+                                                 int *ptr1 = new int(50);
+                                                 *ptr1 = 100;
+                                                 cout << *ptr1;*/
+        if (head == NULL)                    
         {
             head = tail = newNode;
             return;
