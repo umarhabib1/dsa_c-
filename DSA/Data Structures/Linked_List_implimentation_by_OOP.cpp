@@ -34,12 +34,14 @@ public:
                                                  int *ptr1 = new int(50);
                                                  *ptr1 = 100;
                                                  cout << *ptr1;*/
+                                                 
         if (head == NULL)                    
         {
             head = tail = newNode;
             return;
         }
         else
+
         {
             (*newNode).next = head;
             head = newNode;
