@@ -42,6 +42,8 @@ public:
         }                            // cout << *ptr1;
     }
 
+    
+
     void push_back(int val)
     {
         Node *newNode = new Node(val);
