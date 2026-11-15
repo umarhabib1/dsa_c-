@@ -75,6 +75,28 @@ public:
         delete temp;
     }
 
+    void pop_back()
+    {
+        if(head == NULL){
+        cout << " Linked List is empty" << endl;
+        return;       
+        }
+        if (head == tail)
+        {
+            delete head;
+            head = tail = nullptr;
+            return;
+        }
+        Node* temp = head;
+        while ((*temp).next != tail)
+        {
+            temp = (*temp).next;
+        }
+        temp->next = nullptr;
+        delete tail;
+        tail = temp;
+    }
+
     void Show_Tail_Head()
     {
         cout << "Head =" << (*head).data << endl;
@@ -99,9 +121,10 @@ int main()
     ll.push_front(2);
     ll.push_front(1);
     ll.push_back(99);
-    ll.pop_front();
+    // ll.pop_front();
+    ll.pop_back();
 
-    // ll.Show_Tail_Head();
+    ll.Show_Tail_Head();
 
     ll.Display();
 
