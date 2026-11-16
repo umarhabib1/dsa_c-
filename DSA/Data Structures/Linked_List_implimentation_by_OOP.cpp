@@ -97,6 +97,26 @@ public:
         tail = temp;
     }
 
+    void insert(int val,int position){
+        if(position < 0){
+            return;
+        }
+        if (position == 0)
+        {
+            push_front(val);
+            return;
+        }
+        Node* temp = head;
+        for (int i = 0; i < position -1; i++)
+        {
+            temp = (*temp).next;
+        }
+        Node* newNode = new Node(val);
+        (*newNode).next = (*temp).next;
+        (*temp).next = newNode;
+        
+    }
+
     void Show_Tail_Head()
     {
         cout << "Head =" << (*head).data << endl;
@@ -120,9 +140,10 @@ int main()
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);
-    ll.push_back(99);
+    // ll.push_back(99);
     // ll.pop_front();
-    ll.pop_back();
+    // ll.pop_back();
+    ll.insert(4,0);
 
     ll.Show_Tail_Head();
 
