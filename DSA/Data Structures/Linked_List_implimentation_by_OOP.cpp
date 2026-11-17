@@ -106,15 +106,45 @@ public:
             push_front(val);
             return;
         }
+
         Node* temp = head;
-        for (int i = 0; i < position -1; i++)
+        for (int i = 0; i < position -1 && temp != NULL; i++)
         {
             temp = (*temp).next;
         }
+
+        if (temp == NULL)
+        {
+            cout << "Invalid position" << endl;
+            return;
+        }
+        
+
         Node* newNode = new Node(val);
         (*newNode).next = (*temp).next;
         (*temp).next = newNode;
+
+        if ((*newNode).next == NULL)
+        {
+            tail = newNode;
+        }
         
+    }
+
+    int search(int key){
+        int position = 0;
+        Node* temp = head;
+
+        while (temp != NULL)
+        {
+            if (key == (*temp).data)
+            {
+                return position;
+            } 
+            temp = (*temp).next;
+            position ++;
+        }
+        return -1;
     }
 
     void Show_Tail_Head()
@@ -143,11 +173,13 @@ int main()
     // ll.push_back(99);
     // ll.pop_front();
     // ll.pop_back();
-    ll.insert(4,0);
+    // ll.insert(4,3);
 
-    ll.Show_Tail_Head();
+    cout<<ll.search(2);
 
-    ll.Display();
+    // ll.Show_Tail_Head();
+
+    // ll.Display();
 
     return 0;
 }
