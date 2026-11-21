@@ -180,15 +180,16 @@ public:
         head = previous;
   }
 
-  void middleNode(){
+  /*
+  void middleNode(){            
     if (head == nullptr) {
         cout << "List is empty" << endl;
         return;
     }
 
     Node* temp = head;
-    int size = 0;
-    while (temp != nullptr)
+    int size = 0;                               //
+    while (temp != nullptr)                     //  Brute force approach
     {
         temp = (*temp).next;
         size ++;
@@ -200,6 +201,22 @@ public:
             temp = temp->next;
         }
         cout<<temp->data<<endl;
+  }
+  */
+
+  void middleNode(){            
+    if (head == nullptr) {
+        cout << "List is empty" << endl;
+        return;
+    }
+       Node* fast = head;                                //  Optimal approach
+       Node* slow = head;                                //
+    while (fast != nullptr && fast->next != nullptr)
+    {
+        slow = (*slow).next;
+        fast = (*(*fast).next).next;
+    }
+    cout<<(*slow).data;
   }
 
 };
