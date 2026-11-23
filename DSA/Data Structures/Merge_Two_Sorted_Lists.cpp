@@ -219,7 +219,7 @@ public:
     cout<<(*slow).data;
   }
 
-  void mergeSorted(list &other)
+  /*void mergeSorted(list &other)
     {
         if (other.head == nullptr)
         {
@@ -277,6 +277,27 @@ public:
         other.head = nullptr;
         other.tail = nullptr;
     }
+*/
+    void mergeSortedRecursive(list &other)
+    {
+        if (other.head == nullptr)
+        {
+            return;
+        }
+
+        head = mergeNodesRecursive(head, other.head);
+
+        // Advance tail to the final node of the merged list
+        tail = head;
+        while (tail != nullptr && tail->next != nullptr)
+        {
+            tail = tail->next;
+        }
+
+        // Prevent 'other' from still pointing into the merged list
+        other.head = nullptr;
+        other.tail = nullptr;
+    }
 
 };
 
@@ -301,7 +322,8 @@ int main()
     cout << "List 2: ";
     list2.Display();
 
-    list1.mergeSorted(list2);
+    // list1.mergeSorted(list2);
+    list1.mergeSortedRecursive(list2);
 
     cout << "Merged List: ";
     list1.Display();
