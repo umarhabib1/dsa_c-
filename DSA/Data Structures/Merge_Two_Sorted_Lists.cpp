@@ -278,6 +278,29 @@ public:
         other.tail = nullptr;
     }
 */
+Node *mergeNodesRecursive(Node *a, Node *b)
+    {
+        if (a == nullptr)
+        {
+            return b;
+        }
+        if (b == nullptr)
+        {
+            return a;
+        }
+
+        if (a->data <= b->data)
+        {
+            a->next = mergeNodesRecursive(a->next, b);
+            return a;
+        }
+        else
+        {
+            b->next = mergeNodesRecursive(a, b->next);
+            return b;
+        }
+    }
+
     void mergeSortedRecursive(list &other)
     {
         if (other.head == nullptr)
@@ -285,20 +308,26 @@ public:
             return;
         }
 
-        head = mergeNodesRecursive(head, other.head);
-
-        // Advance tail to the final node of the merged list
-        tail = head;
-        while (tail != nullptr && tail->next != nullptr)
+        Node *newTail = nullptr;
+        if (head == nullptr)
         {
-            tail = tail->next;
+            newTail = other.tail;
+        }
+        else if (other.tail == nullptr)
+        {
+            newTail = tail;
+        }
+        else
+        {
+            newTail = (tail->data >= other.tail->data) ? tail : other.tail;
         }
 
-        // Prevent 'other' from still pointing into the merged list
+        head = mergeNodesRecursive(head, other.head);
+        tail = newTail;
+
         other.head = nullptr;
         other.tail = nullptr;
-    }
-
+    } 
 };
 
 
