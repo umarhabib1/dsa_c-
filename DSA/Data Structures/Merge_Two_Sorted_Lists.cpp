@@ -253,7 +253,8 @@ public:
             }
             current = current->next;
         }
-
+  
+        
         // Attach remaining nodes
         if (ptr1 != nullptr)
         {
