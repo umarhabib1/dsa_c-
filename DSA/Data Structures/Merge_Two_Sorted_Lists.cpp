@@ -263,8 +263,10 @@ public:
         else
         {
             current->next = ptr2;
-        }
+    
+            }
 
+            
         // Advance current to the true end so tail is accurate
         while (current->next != nullptr)
         {
