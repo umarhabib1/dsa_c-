@@ -267,6 +267,8 @@ public:
             }
 
             
+
+            
         // Advance current to the true end so tail is accurate
         while (current->next != nullptr)
         {
